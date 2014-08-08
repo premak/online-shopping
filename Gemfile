@@ -4,8 +4,7 @@ gem 'jquery-ui-rails'
 gem 'kaminari', '~> 0.14'
 gem 'i18n', '>= 0.6.9'
 gem 'rails', '4.1.1'
-#gem 'sqlite3'
-gem 'pg'
+gem 'sqlite3'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 #gem 'cocaine', '0.3.2'
@@ -35,4 +34,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
