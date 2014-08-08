@@ -10,10 +10,7 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   resources :users do
-    collection do
-      get 'new'
-      post 'create'
-    end
+    get 'signup', :on => :collection
   end
 
   #get 'Register' => 'users#new'
