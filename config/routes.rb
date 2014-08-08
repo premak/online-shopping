@@ -9,7 +9,12 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
 
-  resources :users
+  resources :users do
+    collection do
+      get 'new'
+      post 'create'
+    end
+  end
 
   #get 'Register' => 'users#new'
 
