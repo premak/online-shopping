@@ -4,7 +4,9 @@ gem 'jquery-ui-rails'
 gem 'kaminari', '~> 0.14'
 gem 'i18n', '>= 0.6.9'
 gem 'rails', '4.1.1'
-gem 'sqlite3'
+group :development do
+  gem 'sqlite3'
+end
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 
 #gem 'cocaine', '0.3.2'
