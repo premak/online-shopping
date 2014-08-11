@@ -9,9 +9,12 @@ Rails.application.routes.draw do
   get 'sessions/create'
   get 'sessions/destroy'
 
-  resources :users do
-    get 'signup', :on => :collection
-  end
+  resources :users
+  
+  get '/home', to: 'static_pages#home', as: :home_static_page
+  get '/questions', to: 'static_pages#questions'
+  get '/news', to: 'static_pages#news'
+  get '/contact', to: 'static_pages#contact'
 
   #get 'Register' => 'users#new'
 
